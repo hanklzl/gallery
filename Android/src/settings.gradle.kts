@@ -16,15 +16,21 @@
 
 pluginManagement {
   repositories {
-    google {
-      content {
-        includeGroupByRegex("com\\.android.*")
-        includeGroupByRegex("com\\.google.*")
-        includeGroupByRegex("androidx.*")
-      }
-    }
-    mavenCentral()
-    gradlePluginPortal()
+
+    maven { url = uri("https://maven-central-asia.storage-download.googleapis.com/maven2/") }
+    maven { url = uri("https://maven.aliyun.com/repository/google") }
+    maven { url = uri("https://maven.aliyun.com/repository/public") }
+    maven { url = uri("https://maven.aliyun.com/repository/gradle-plugin") }
+    maven { url = uri("https://repo.huaweicloud.com/repository/maven/") }
+//    google {
+//      content {
+//        includeGroupByRegex("com\\.android.*")
+//        includeGroupByRegex("com\\.google.*")
+//        includeGroupByRegex("androidx.*")
+//      }
+//    }
+//    mavenCentral()
+//    gradlePluginPortal()
   }
   resolutionStrategy {
     eachPlugin {
@@ -39,8 +45,13 @@ dependencyResolutionManagement {
   repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
   repositories {
     //        mavenLocal()
-    google()
-    mavenCentral()
+//    google()
+//    mavenCentral()
+    maven { url = uri("https://maven-central-asia.storage-download.googleapis.com/maven2/") }
+    maven { url = uri("https://maven.aliyun.com/repository/google") }
+    maven { url = uri("https://maven.aliyun.com/repository/public") }
+    maven { url = uri("https://maven.aliyun.com/repository/gradle-plugin") }
+    maven { url = uri("https://repo.huaweicloud.com/repository/maven/") }
   }
 }
 
